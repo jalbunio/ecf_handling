@@ -72,7 +72,8 @@ public class Corretor {
 		logs.newLine();
 
 		} catch (Exception e) {
-			logs.append(new Date() + "  " + e.getMessage());
+			e.printStackTrace();
+			logs.append(new Date() + "  " + e.getCause() + " " + e.getMessage());
 			logs.newLine();
 			logs.flush();
 			logs.close();
